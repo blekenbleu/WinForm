@@ -6,5 +6,10 @@ namespace WinForm
         {
             InitializeComponent();
         }
+        public int Write(string s)
+        {
+            textBox1.Text = s;
+            return 0;
+        }
     }
 }
