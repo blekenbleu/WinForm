@@ -11,5 +11,15 @@ namespace WinForm
             textBox1.Text = s;
             return 0;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            textBox2.Text = "12";
+        }
     }
 }

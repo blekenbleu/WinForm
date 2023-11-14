@@ -33,6 +33,10 @@ namespace WinForm
             textBox1 = new TextBox();
             label1 = new Label();
             label2 = new Label();
+            button1 = new Button();
+            textBox2 = new TextBox();
+            label3 = new Label();
+            button2 = new Button();
             SuspendLayout();
             // 
             // textBox1
@@ -61,11 +65,52 @@ namespace WinForm
             label2.TabIndex = 2;
             label2.Text = "Stroke event:";
             // 
+            // button1
+            // 
+            button1.Location = new Point(317, 106);
+            button1.Name = "button1";
+            button1.Size = new Size(141, 23);
+            button1.TabIndex = 3;
+            button1.Text = "capture selected device";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(259, 151);
+            textBox2.Name = "textBox2";
+            textBox2.ReadOnly = true;
+            textBox2.Size = new Size(32, 23);
+            textBox2.TabIndex = 4;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(163, 154);
+            label3.Name = "label3";
+            label3.Size = new Size(90, 15);
+            label3.TabIndex = 5;
+            label3.Text = "selected device:";
+            // 
+            // button2
+            // 
+            button2.Location = new Point(79, 106);
+            button2.Name = "button2";
+            button2.Size = new Size(152, 23);
+            button2.TabIndex = 6;
+            button2.Text = "select current device";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(600, 207);
+            Controls.Add(button2);
+            Controls.Add(label3);
+            Controls.Add(textBox2);
+            Controls.Add(button1);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(textBox1);
@@ -80,5 +125,9 @@ namespace WinForm
         private TextBox textBox1;
         private Label label1;
         private Label label2;
+        private Button button1;
+        private TextBox textBox2;
+        private Label label3;
+        private Button button2;
     }
 }
