@@ -26,3 +26,8 @@ Added MessageBox in Form1.Designer.cs `Dispose()`;
    a good place to unintercept Mouse and Keyboard events.. 
 - This happens inside Program.cs `Application.Run(form1);`  
 - can setup callback to `form1.Write()` just before that.  
+- **Intercept controls**  
+	![](ButtonBoxForm.png)  
+	- button to select device currently shown in **Stroke event** TextBox  
+	- read-only TextBox to display selected device  
+	- button to intercept strokes from selected device (then minimize to notification area)  
