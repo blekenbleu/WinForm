@@ -1,5 +1,5 @@
-# WinForm
- Simplest possible C# Winform app  
+# WinForm - MessageBox branch  
+ Slightly less simple C# Winform app  
 - Downloaded [.gitignore](https://github.com/github/gitignore/blob/main/VisualStudio.gitignore) *before* GitHub Desktop commit of Visual Studio configuration  
 ![](WinForm.png)  
 ![](Configure.png)  
@@ -18,3 +18,11 @@
   		textBox1.Text = foo;
 	```
 ![](VSform.jpg)  
+
+### MessageBox branch
+Added MessageBox in Form1.Designer.cs `Dispose()`;  
+- MessageBox did not get invoked inside `if (disposing && (components != null)) {}`  
+- `Dispose()` invokes MessageBox as WinForm.exe exits;  
+   a good place to unintercept Mouse and Keyboard events.. 
+- This happens inside Program.cs `Application.Run(form1);`  
+- can setup callback to `form1.Write()` just before that.  

@@ -1,4 +1,5 @@
-﻿namespace WinForm
+﻿using System.Windows.Forms;
+namespace WinForm
 {
     partial class Form1
     {
@@ -13,6 +14,7 @@
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
+            DialogResult dialogResult = MessageBox.Show("Dispose", "MessageBox");
             if (disposing && (components != null))
             {
                 components.Dispose();
