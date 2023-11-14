@@ -83,7 +83,7 @@ namespace WinForm
             textBox2.Location = new Point(259, 151);
             textBox2.Name = "textBox2";
             textBox2.ReadOnly = true;
-            textBox2.Size = new Size(32, 23);
+            textBox2.Size = new Size(17, 23);
             textBox2.TabIndex = 4;
             // 
             // label3
@@ -113,7 +113,6 @@ namespace WinForm
             notifyIcon1.Icon = (Icon)resources.GetObject("notifyIcon1.Icon");
             notifyIcon1.Text = "WinForm";
             notifyIcon1.MouseClick += notifyIcon1_MouseClick;
-            notifyIcon1.ShowBalloonTip(1000);       // does this really do anything
             // 
             // Form1
             // 

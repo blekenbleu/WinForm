@@ -32,9 +32,9 @@ Added MessageBox in Form1.Designer.cs `Dispose()`;
 	- read-only TextBox to display selected device  
 	- button to intercept strokes from selected device  
 		(then [minimize to notification area](https://www.c-sharpcorner.com/UploadFile/f9f215/how-to-minimize-your-application-to-system-tray-in-C-Sharp/))  
-		- Windows icons are 256 x256, then resized automatically where used.
+		- Windows icons are 256x256, then resized automatically where used.
 		- [Example code](https://www.c-sharpcorner.com/UploadFile/f9f215/how-to-minimize-your-application-to-system-tray-in-C-Sharp/)
-			 needed a `?` to resolve [nullable warning](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-messages/nullable-warnings):  
+			 needed a `?` to resolve baffling [nullable warning](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-messages/nullable-warnings):  
 		```
 		// https://www.c-sharpcorner.com/UploadFile/f9f215/how-to-minimize-your-application-to-system-tray-in-C-Sharp/
         public void Form1_Resize(object? sender, EventArgs e)   // question mark is crucial(?!)
