@@ -30,6 +30,8 @@ namespace WinForm
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             textBox1 = new TextBox();
             label1 = new Label();
             label2 = new Label();
@@ -37,6 +39,7 @@ namespace WinForm
             textBox2 = new TextBox();
             label3 = new Label();
             button2 = new Button();
+            notifyIcon1 = new NotifyIcon(components);
             SuspendLayout();
             // 
             // textBox1
@@ -102,6 +105,16 @@ namespace WinForm
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
+            // notifyIcon1
+            // 
+            notifyIcon1.BalloonTipIcon = ToolTipIcon.Info;
+            notifyIcon1.BalloonTipText = "intercepted";
+            notifyIcon1.BalloonTipTitle = "WinForm";
+            notifyIcon1.Icon = (Icon)resources.GetObject("notifyIcon1.Icon");
+            notifyIcon1.Text = "WinForm";
+            notifyIcon1.MouseClick += notifyIcon1_MouseClick;
+            notifyIcon1.ShowBalloonTip(1000);       // does this really do anything
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -129,5 +142,6 @@ namespace WinForm
         private TextBox textBox2;
         private Label label3;
         private Button button2;
+        private NotifyIcon notifyIcon1;
     }
 }

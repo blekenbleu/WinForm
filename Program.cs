@@ -1,3 +1,5 @@
+using System.Windows.Forms;
+
 namespace WinForm
 {
     internal static class Program

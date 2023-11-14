@@ -1,5 +1,5 @@
 # WinForm - MessageBox branch  
- Slightly less simple C# Winform app  
+ C# Winform app slightly less simple than `main` branch
 - Downloaded [.gitignore](https://github.com/github/gitignore/blob/main/VisualStudio.gitignore) *before* GitHub Desktop commit of Visual Studio configuration  
 ![](WinForm.png)  
 ![](Configure.png)  
@@ -30,4 +30,20 @@ Added MessageBox in Form1.Designer.cs `Dispose()`;
 	![](ButtonBoxForm.png)  
 	- button to select device currently shown in **Stroke event** TextBox  
 	- read-only TextBox to display selected device  
-	- button to intercept strokes from selected device (then minimize to notification area)  
+	- button to intercept strokes from selected device  
+		(then [minimize to notification area](https://www.c-sharpcorner.com/UploadFile/f9f215/how-to-minimize-your-application-to-system-tray-in-C-Sharp/))  
+		- Windows icons are 256 x256, then resized automatically where used.
+		- [Example code](https://www.c-sharpcorner.com/UploadFile/f9f215/how-to-minimize-your-application-to-system-tray-in-C-Sharp/)
+			 needed a `?` to resolve [nullable warning](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-messages/nullable-warnings):  
+		```
+		// https://www.c-sharpcorner.com/UploadFile/f9f215/how-to-minimize-your-application-to-system-tray-in-C-Sharp/
+        public void Form1_Resize(object? sender, EventArgs e)   // question mark is crucial(?!)
+        {
+            // hide minimized form from the task bar; show NotifyIcon in notification area
+            if (this.WindowState == FormWindowState.Minimized)
+            {
+                Hide();
+                notifyIcon1.Visible = true;
+            }
+        }
+		```
